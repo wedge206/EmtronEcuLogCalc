@@ -23,7 +23,7 @@ function ParseLogTime(totalTime) {
 }
 
 var dataModel = function() {
-    this.memSize = ko.observable(4);
+    this.memSize = ko.observable(32);
 
     this.mem32Clicked = function() { this.memSize(32); }
     this.mem24Clicked = function() { this.memSize(24); }
