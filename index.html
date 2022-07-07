@@ -1,0 +1,84 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Duratec Tappet Calculator</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.5.0.js"></script>
+    </head>
+    <body>
+      <div class="p-5 text-center bg-light">
+        <h1 class="mb-3">Welcome to the EMtron Log Calculator</h1>
+        <h4 class="mb-3">Created by <a href="https://www.instagram.com/mtndogrally/">Mountain Dog Rally Team</a></h4>
+      </div>
+        <table class="table table-bordered table-sm">
+            <thead>
+              <tr>
+                <th scope="row">Log Memory Size (MB)</th>
+                <td>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bind="text: memSize">32MB</button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#" data-bind="click: mem32Clicked">32</a></li>
+                      <li><a class="dropdown-item" href="#" data-bind="click: mem24Clicked">24</a></li>
+                      <li><a class="dropdown-item" href="#" data-bind="click: mem16Clicked">16</a></li>
+                      <li><a class="dropdown-item" href="#" data-bind="click: mem8Clicked">8</a></li>
+                      <li><a class="dropdown-item" href="#" data-bind="click: mem4Clicked">4</a></li>
+                      <li><a class="dropdown-item" href="#" data-bind="click: mem2Clicked">2</a></li>
+                      <li><a class="dropdown-item" href="#" data-bind="click: mem1Clicked">1</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col">Dataset #</th>
+                <th scope="col">1</th>
+                <th scope="col">2</th>
+                <th scope="col">3</th>
+                <th scope="col">4</th>
+                <th scope="col">5</th>
+                <th scope="col">6</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Logging Rate (Hz)</th>
+                <td><input type="text" class="form-control" data-bind='value: dataset1Rate'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset2Rate'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset3Rate'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset4Rate'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset5Rate'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset6Rate'></input></td>
+              </tr>
+              <tr>
+                <th scope="row">Parameters</th>
+                <td><input type="text" class="form-control" data-bind='value: dataset1Params'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset2Params'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset3Params'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset4Params'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset5Params'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset6Params'></input></td>
+              </tr>
+              <tr>
+                <th scope="row">Megabytes per second (MB/s)</th>
+                <td><input type="text" class="form-control" data-bind='value: dataset1Bytes'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset2Bytes'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset3Bytes'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset4Bytes'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset5Bytes'></input></td>
+                <td><input type="text" class="form-control" data-bind='value: dataset6Bytes'></input></td>
+              </tr>
+              <tr>
+                <th scope="row">Total Log Time (s)</th>
+                <td><input type="text" class="form-control" data-bind='value: logTime'></input></td>
+              </tr>
+              <tr>
+                <th scope="row">Total Log Time (h:m:s)</th>
+                <td><input type="text" class="form-control" data-bind='value: logParsedTime'></input></td>
+              </tr>
+            </tbody>
+          </table>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="calculator.js"></script>
+    </body>
+</html>
